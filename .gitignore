@@ -1,0 +1,16 @@
+# Byte-compiled / cached files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# System files (Windows / macOS)
+.DS_Store
+Thumbs.db
+
+# Ngrok related (if any)
+.ngrok2/

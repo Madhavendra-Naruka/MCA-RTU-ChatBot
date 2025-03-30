@@ -1,0 +1,31 @@
+,Semester,Subject Code,Subject,Description
+0,1,101,Mathematical Foundations in Computer Science,Mathematical concepts for computing \n Foundations of algorithms
+1,1,102,Object Oriented Programming with C++,Introduction to object-oriented programming \n Core concepts like inheritance and polymorphism
+2,1,103,Operating System,Study of operating systems \n Key topics include memory and process management
+3,1,104,Computer Architecture,Introduction to computer hardware structure \n Analysis of data flow and system performance
+4,1,105,Database Systems,Concepts of database design \n SQL and relational databases
+5,1,106,Web Technologies,Introduction to web development \n Study of client-server architecture and web technologies
+6,1,151,Object Oriented Programming Lab,Practical implementation of OOP concepts \n Hands-on experience with C++
+7,1,152,SQL-PL/SQL Lab,Practical implementation of SQL \n Working with databases using PL/SQL
+8,1,153,Web Technologies Lab,Practical implementation of web development \n Building and deploying web applications
+9,2,201,Java Technologies,Introduction to Java programming \n Object-oriented concepts in Java
+10,2,202,Computer Networks,Study of network protocols and architecture \n Concepts of data transmission and network security
+11,2,203,Data Structures,"Introduction to data structures \n Implementation of lists, stacks, queues, and trees"
+12,2,204,Software Engineering & UML,Software development methodologies \n Usage of UML for modeling software systems
+13,2,205,Python Programming,Introduction to Python programming \n Basic and advanced concepts in Python
+14,2,206,Business Informatics,Understanding business information systems \n Role of technology in business decision making
+15,2,251,Data Structures Lab,Practical implementation of data structures \n Hands-on coding with various structures
+16,2,252,Java Technologies Lab,Practical implementation of Java programming concepts \n Building real-world Java applications
+17,2,253,Python Programming Lab,Practical implementation of Python programming \n Solving problems using Python
+18,3,301,Cloud Computing,Introduction to cloud computing \n Study of cloud architecture and services
+19,3,302,Analysis and Design of Algorithm,Study of algorithm design techniques \n Analysis of algorithm complexity and efficiency
+20,3,303,Artificial Intelligence,Introduction to artificial intelligence \n Study of intelligent systems and machine learning
+21,3,304,Information Security,Understanding the fundamentals of information security \n Study of security protocols and encryption
+22,3,305,Mobile Application Development,Introduction to mobile app development \n Study of mobile platform architecture and design
+23,3,306,Elective 1,Options between a) Data Mining and Warehousing \n b) Big Data Technologies \n c) Soft Computing
+24,3,351,ADA Lab,Practical implementation of algorithm design concepts \n Hands-on experience with complex algorithms
+25,3,352,Mobile Application Development Lab,Practical implementation of mobile app development \n Building and testing mobile applications
+26,3,353,Summer Industrial Training Presentation,Presentation of summer training projects \n Industrial experience evaluation
+27,4,401,Software Project Management,
+28,4,402,Elective 2,"Option between:  a) Principles of Management and Information System, b) Machine Learning, c) Data Science with R"
+29,4,451,Industrial Project,
