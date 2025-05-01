@@ -42,13 +42,15 @@ def fetch_subject_info(req):
 
 
 def fetch_sem_info(req):
-    sem = req.get('queryResult').get('parameters').get('Semester')
+    sem = req.get('queryResult').get('parameters').get('Semester')[0]
 
     # Check if the input contains a digit and extract semester number
     contains_digit = any(char.isdigit() for char in sem)
+    
     if contains_digit:
         sem = int(re.search(r'\d+', sem).group())
     else:
+        
         sem = extract_int(sem)
     if sem not in range(1,5):
         return jsonify({
@@ -57,30 +59,51 @@ def fetch_sem_info(req):
     # Fetch subject list for the specified semester
     subject_list = subject_info_df[subject_info_df['Semester'] == sem]['Subject'].tolist()
 
-    # Prepare the fulfillment message with quick replies
+   # Prepare the fulfillment message with text
     fulfillment_messages = [{
         "text": {
-            "text": ["The Semester has the following subjects:"]
+            "text": [f"The Semester {sem} has the following subjects:"]
         }
     }]
-    
-    # Add subjects as quick replies
+
+    # Prepare quick replies (for Test Console)
     quick_replies = []
     for subject in subject_list:
         quick_replies.append(subject)
 
-    # Add a follow-up question as a quick reply
+    # Prepare chips (for Messenger)
+    chips = []
+    for subject in subject_list:
+        chips.append({"text": subject})
+
+    # Add quick replies for Test Console
     fulfillment_messages.append({
         "quickReplies": {
+            "title": "Please choose:",
             "quickReplies": quick_replies
-        }
+        },
+        "platform": "PLATFORM_UNSPECIFIED"  # Test Console platform
     })
 
+    # Add chips for Messenger
+    fulfillment_messages.append({
+        "payload": {
+            "richContent": [
+                [
+                    {
+                        "type": "chips",
+                        "options": chips
+                    }
+                ]
+            ]
+        },
+        "platform": "DIALOGFLOW_MESSENGER"  # Messenger platform
+    })
+
+    # Return the full response
     return jsonify({
         'fulfillmentMessages': fulfillment_messages
     })
-
-
 
 
 

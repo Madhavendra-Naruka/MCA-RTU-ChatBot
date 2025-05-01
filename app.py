@@ -10,6 +10,7 @@ def webhook():
     
     # Extract the intent name from the request
     intent_name = req.get('queryResult').get('intent').get('displayName')
+    print("Webhook called!")
 
     # Initialize response
     response = ""

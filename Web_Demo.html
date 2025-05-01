@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialogflow Chatbot Demo</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        .chatbot-container {
+            width: 350px;
+            height: 430px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        @media (max-width: 400px) {
+            .chatbot-container {
+                width: 90%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+        <!-- Typing sound added (make sure keystroke.mp3 is in the same folder as this HTML file) -->
+        <!-- <audio id="typing-sound" src="keystroke.mp3" preload="auto"></audio> -->
+        
+        <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+        <df-messenger
+          intent="WELCOME"
+          chat-title="MCA_RTU"
+          agent-id="b00611a3-b80d-4e49-84b7-b4a677216aa2"
+          language-code="en"
+        ></df-messenger>
+
+
+    <!-- <script>
+        // Play typing sound when the bot is typing
+        function playTypingSound() {
+            var typingSound = document.getElementById("typing-sound");
+            typingSound.play();
+        }
+
+        // Simulate a typing event by the chatbot
+        document.querySelector('df-messenger').addEventListener('df-response-received', function() {
+            playTypingSound(); // Play sound when bot is about to respond
+        });
+    </script> -->
+
+</body>
+</html>
